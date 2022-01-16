@@ -12,10 +12,4 @@ hello git
 hello git 
 hello git 
 hello git 
-hello git 
-hello git
-hello git
-33333333
-heeelo
-heeelo
-heeelo
+hello githeeelo
