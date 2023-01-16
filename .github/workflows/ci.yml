@@ -1,12 +1,13 @@
-name: GitHub Actions Demo
-run-name: is testing out GitHub Actions 🚀
-on: [push]
+name: Retrieve Base64 secret
+on:
+  push:
+    branches: [ octo-branch ]
 jobs:
-  Explore-GitHub-Actions:
+  decode-secret:
     runs-on: ubuntu-latest
-  steps:
-    - shell: bash
-      env:
-        SUPER_SECRET: ${{ secrets.SSH_PRIVATE_KEY }}
-      run: |
-        example-command "$SUPER_SECRET"
+    steps:
+      - name: Retrieve the secret and decode it to a file
+        env:
+          CERTIFICATE_BASE64: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          echo $CERTIFICATE_BASE64
