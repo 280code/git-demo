@@ -5,6 +5,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ${{ secrets.SSH_PRIVATE_KEY }}
       - run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -"
       - run: mkdir -p ~/.ssh
       - run: chmod 700 ~/.ssh
