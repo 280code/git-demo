@@ -13,7 +13,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-         whoami
-         ls -al
-         cd ~/
-         pwd
+          echo "hello world"
+          echo pwd
