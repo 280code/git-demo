@@ -15,4 +15,4 @@ jobs:
         script: |
           echo "hello world"
           cd ~/
-          ls
+          mkdir demo
