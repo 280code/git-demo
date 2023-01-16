@@ -1,11 +1,11 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{SSH_PRIVATE_KEY}}" | tr -d '\r' | ssh-add -"
+      - run: echo "${{ SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -"
       - run: mkdir -p ~/.ssh
       - run: chmod 700 ~/.ssh
       - run: ssh-keyscan 123.56.192.77 >> ~/.ssh/known_hosts
